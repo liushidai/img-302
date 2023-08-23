@@ -1,4 +1,4 @@
-package com.example.img302.module.user.contoller;
+package com.example.img302.module.user.contoller.param;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @author liushidai
  */
 @Data
-public class CreateUserParam implements Serializable {
+public class UserSignUpParam implements Serializable {
     /**
      * 用户名
      */

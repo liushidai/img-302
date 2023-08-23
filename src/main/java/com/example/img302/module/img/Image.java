@@ -24,11 +24,16 @@ public class Image extends EntityBase implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @ManyToOne(optional = false)
-    private User user;
-    @ManyToOne(optional = false)
-    private ImageGroup imageGroup;
+    /**
+     * User ID
+     */
+    @Column(nullable = false)
+    private Integer userId;
+    /**
+     * ImageGroup ID
+     */
+    @Column(nullable = false)
+    private String imageGroupId;
 
     //    @Column(length = 32, nullable = false, unique = true, columnDefinition = "")
     @GeneratedValue(strategy = GenerationType.UUID)

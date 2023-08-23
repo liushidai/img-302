@@ -15,9 +15,13 @@ import java.util.List;
 @Getter
 @Setter
 public class ImageGroup extends EntityBase implements Serializable {
+    /**
+     * User ID
+     */
+    @Column(nullable = false)
+    private Integer userId;
+    
     @Column(length = 32, nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "imageGroup", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Image> images;
 }
